@@ -10,7 +10,7 @@
 - 通过电阻色环分析电阻阻值
 
 运行环境：
-- IntelliJ IDEA
+- IntelliJ IDEA or Eclipse
 - OpenCV 3.2
 
 ![image](https://github.com/HUSTLrZ/ResLocator/raw/master/screenshots/src.png)
