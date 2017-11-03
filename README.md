@@ -13,3 +13,5 @@
 - IntelliJ IDEA
 - OpenCV 3.2
 
+![image](https://github.com/HUSTLrZ/ResLocator/raw/master/screenshots/src.png)
+![image](https://github.com/HUSTLrZ/ResLocator/raw/master/screenshots/result.png)
