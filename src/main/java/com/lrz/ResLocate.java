@@ -7,9 +7,10 @@ import org.opencv.imgproc.Imgproc;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class ResLocate {
 
-    private static final String PATH = "G:/tmp/";
+    private static final String PATH = "res/img/";
 
     /**
      * 经过高斯模糊、灰度化、二值化、开操作、膨胀等预处理
@@ -102,6 +103,7 @@ public class ResLocate {
         }
 
         Imgcodecs.imwrite(PATH + "result.jpg", img_threshold);
+
         return resultList;
     }
 

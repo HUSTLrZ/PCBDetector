@@ -3,9 +3,7 @@ package com.lrz;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 
-/**
- * Hello world!
- */
+
 public class App {
     static {
         //加载opencv动态链接库

@@ -1,4 +1,4 @@
-# a demo to locate resistors on PCB
+# a demo to identify resistors on PCB(not finished yet)
 
 在电路板上定位电阻（包括疑似电阻的元件）
 
@@ -10,6 +10,7 @@
 - 通过电阻色环分析电阻阻值
 
 运行环境：
+- JDK8
 - IntelliJ IDEA or Eclipse
 - OpenCV 3.2
 
