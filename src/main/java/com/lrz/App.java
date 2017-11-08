@@ -12,8 +12,10 @@ public class App {
     }
 
     public static void main(String[] args) {
-        ResLocate resLocate = new ResLocate();
-        Mat src = Imgcodecs.imread("G:/123.png"); //读取原始电路板图片
-        resLocate.resLocate(src);
+        Mat src = Imgcodecs.imread("res/img/debug_crop_3.jpg"); //读取原始电路板图片
+//        ResLocate resLocate = new ResLocate();
+//        resLocate.resLocate(src);
+        ResIdentify resIdentify = new ResIdentify();
+        resIdentify.resIdentify(src);
     }
 }

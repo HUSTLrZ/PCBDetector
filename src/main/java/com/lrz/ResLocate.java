@@ -11,6 +11,14 @@ import java.util.List;
 public class ResLocate {
 
     private static final String PATH = "res/img/";
+    private static int threshold = 0;           //二值化阈值
+    private static int thresholdType = 8;       //二值化类型（自动选取阈值）
+    private static int morphOpenSizeX = 20;     //开操作size
+    private static int morphOpenSizeY = 20;     //开操作size
+    private static int morphDilateSizeX = 17;   //膨胀size
+    private static int morphDilateSizeY = 17;   //膨胀size
+    private static int verifyArea = 1000;       //符合要求的矩形块最小面积
+
 
     /**
      * 经过高斯模糊、灰度化、二值化、开操作、膨胀等预处理
@@ -37,18 +45,18 @@ public class ResLocate {
 
         //二值化
         Mat img_threshold = new Mat();
-        Imgproc.threshold(src_gray, img_threshold, 0, 255, 8);
+        Imgproc.threshold(src_gray, img_threshold, threshold, 255, thresholdType);
 
         Imgcodecs.imwrite(PATH + "img_threshold.jpg", img_threshold);
 
         //开操作消掉部分白色线条和白色斑点
-        Mat element = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(20, 20));
+        Mat element = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(morphOpenSizeX, morphOpenSizeY));
         Imgproc.morphologyEx(img_threshold, img_threshold, Imgproc.MORPH_OPEN, element);
 
         Imgcodecs.imwrite(PATH + "morphology_open.jpg", img_threshold);
 
         //膨胀消除电阻间隔
-        element = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(17, 17));
+        element = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(morphDilateSizeX, morphDilateSizeY));
         Imgproc.morphologyEx(img_threshold, img_threshold, Imgproc.MORPH_DILATE, element);
 
         Imgcodecs.imwrite(PATH + "morphology_dilate.jpg", img_threshold);
@@ -83,7 +91,7 @@ public class ResLocate {
                 Point pt1 = new Point(rect_points[j].x, rect_points[j].y);
                 Point pt2 = new Point(rect_points[(j + 1) % 4].x, rect_points[(j + 1) % 4].y);
 
-                Imgproc.line(img_threshold, pt1, pt2, new Scalar(255, 255, 255, 255), 4, 8, 0);
+                Imgproc.line(img_threshold, pt1, pt2, new Scalar(255, 0, 255, 255), 4, 8, 0);
             }
 
             //旋转垂直方向的电阻
@@ -121,7 +129,7 @@ public class ResLocate {
         } else {
             ratio = (int) (mr.size.width / mr.size.height);
         }
-        if (ratio >= 2 && ratio <= 3 && area >= 1000)
+        if (ratio >= 2 && ratio <= 3 && area >= verifyArea)
             return true;
         return false;
     }
