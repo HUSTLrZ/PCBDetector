@@ -16,3 +16,4 @@
 
 ![image](https://github.com/HUSTLrZ/ResLocator/raw/master/screenshots/src.png)
 ![image](https://github.com/HUSTLrZ/ResLocator/raw/master/screenshots/result.png)
+![image](https://github.com/HUSTLrZ/ResLocator/raw/master/screenshots/colorband.png)
