@@ -1,13 +1,18 @@
 package com.lrz.train;
 
 import com.lrz.util.Util;
+import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.ml.Ml;
+import org.opencv.ml.SVM;
+import org.opencv.ml.TrainData;
 
 import java.util.*;
 
 /**
  * not finished yet
+ *
  * @Author HustLrz
  * @Date Created in 15:08 2017/11/6
  */
@@ -56,7 +61,12 @@ public class SVMTrain {
     }
 
     private void getResistorTrain(Mat trainingImages, List<Integer> trainingLabels, String name) {
-        int label = 1;
+        int label;
+        if (name.equals("HasResistor")) {
+            label = 1;
+        } else {
+            label = -1;
+        }
         String filePath = "res/data/train/" + name;
         List<String> files = new ArrayList<String>();
 
@@ -81,7 +91,12 @@ public class SVMTrain {
     }
 
     private void getResistorTest(List<Mat> trainingImages, List<Integer> trainingLabels, String name) {
-        int label = 1;
+        int label;
+        if (name.equals("HasResistor")) {
+            label = 1;
+        } else {
+            label = -1;
+        }
         String filePath = "res/data/test/" + name;
         List<String> files = new ArrayList<String>();
 
@@ -101,20 +116,20 @@ public class SVMTrain {
         }
     }
 
-    public void learn2HasResistor(){
+    public void learn2HasResistor() {
         learn2HasResistor(0.7f);
     }
 
-    public void learn2HasResistor(float factor){
-        divideFiles(factor,hasResistor);
+    public void learn2HasResistor(float factor) {
+        divideFiles(factor, hasResistor);
     }
 
-    public void learn2NoResistor(){
+    public void learn2NoResistor() {
         learn2NoResistor(0.7f);
     }
 
-    public void learn2NoResistor(float factor){
-        divideFiles(factor,noResistor);
+    public void learn2NoResistor(float factor) {
+        divideFiles(factor, noResistor);
     }
 
     public void getNoResistorTrain(Mat trainingImages, List<Integer> trainingLabels) {
@@ -126,13 +141,65 @@ public class SVMTrain {
     }
 
 
-    public void getHasResistorTest(List<Mat> testingImages,List<Integer> testingLabels)
-    {
-        getResistorTest(testingImages,testingLabels,hasResistor);
+    public void getHasResistorTest(List<Mat> testingImages, List<Integer> testingLabels) {
+        getResistorTest(testingImages, testingLabels, hasResistor);
     }
 
-    public void getNoResistorTest(List<Mat> testingImages,List<Integer> testingLabels)
-    {
-        getResistorTest(testingImages,testingLabels,noResistor);
+    public void getNoResistorTest(List<Mat> testingImages, List<Integer> testingLabels) {
+        getResistorTest(testingImages, testingLabels, noResistor);
+    }
+
+    public int svmTrain(boolean dividePrepared, boolean trainPrepared) {
+        Mat dataMat = new Mat();    //训练数据
+        Mat labelMat = new Mat();   //标签
+
+
+        Mat trainingImages = new Mat();
+        List<Integer> trainingLabels = new ArrayList<Integer>();
+
+        //分散样本
+        if (!dividePrepared) {
+            System.out.println("devide learn to train and test");
+            learn2HasResistor();
+            learn2NoResistor();
+        }
+
+        //将样本载入内存
+        if (!trainPrepared) {
+            System.out.println("begin to get train data to memory");
+            getHasResistorTrain(trainingImages, trainingLabels);
+            getNoResistorTrain(trainingImages, trainingLabels);
+
+            trainingImages.copyTo(dataMat);
+            dataMat.convertTo(dataMat, CvType.CV_32FC1);
+
+            labelMat.create(trainingLabels.size(), 1, CvType.CV_32SC1);
+            for (int i = 0; i < trainingLabels.size(); i++) {
+                labelMat.put(i, 0, trainingLabels.get(i));
+            }
+
+        }
+
+        List<Mat> testingImages = new ArrayList<Mat>();
+        List<Integer> testingLabels = new ArrayList<Integer>();
+        System.out.println("begin to get test data to memory");
+
+        getHasResistorTest(testingImages, testingLabels);
+        getNoResistorTest(testingImages, testingLabels);
+
+        SVM svm = SVM.create();
+        svm.setType(SVM.C_SVC);
+        svm.setKernel(SVM.RBF);
+        svm.setDegree(0.1);
+        svm.setGamma(1);
+        svm.setCoef0(0.1);
+        svm.setNu(0.1);
+        svm.setP(0.1);
+        svm.setC(1);
+
+        TrainData trainData = TrainData.create(dataMat, Ml.ROW_SAMPLE, labelMat);
+        svm.train(trainData);
+
+        return 0;
     }
 }
