@@ -3,6 +3,7 @@ package com.lrz.train;
 import com.lrz.util.Util;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
+import org.opencv.core.TermCriteria;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.ml.Ml;
 import org.opencv.ml.SVM;
@@ -187,6 +188,7 @@ public class SVMTrain {
         getHasResistorTest(testingImages, testingLabels);
         getNoResistorTest(testingImages, testingLabels);
 
+        //还没测试过，先研究研究
         SVM svm = SVM.create();
         svm.setType(SVM.C_SVC);
         svm.setKernel(SVM.RBF);
@@ -196,10 +198,12 @@ public class SVMTrain {
         svm.setNu(0.1);
         svm.setP(0.1);
         svm.setC(1);
+        svm.setTermCriteria(new TermCriteria(1, 100000, 0.0001));
 
         TrainData trainData = TrainData.create(dataMat, Ml.ROW_SAMPLE, labelMat);
         svm.train(trainData);
 
+        svm.save("res/model/svm.xml");
         return 0;
     }
 }
