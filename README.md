@@ -1,13 +1,11 @@
 # a demo to identify resistors on PCB(not finished yet)
 
-在电路板上定位电阻（包括疑似电阻的元件）
+更新：
+- 程序能够完成的功能：在PCB上定位疑似色环电阻的物体，并通过SVM分类得到真的电阻，
+通过图像处理提取色环
 
-待完成：
-- Identify resistors using SVM
-- 通过SVM进行电阻的识别
+- 待完成：通过分析提取到的色环图像得到电阻阻值
 
-- read resistor value through color bands
-- 通过电阻色环分析电阻阻值
 
 运行环境：
 - JDK8
