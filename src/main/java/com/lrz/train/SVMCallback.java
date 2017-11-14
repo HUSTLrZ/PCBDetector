@@ -13,6 +13,13 @@ public interface SVMCallback {
      * @param image
      * @return
      */
-    public Mat getHistogramFeatures(Mat image);
+    Mat getHisteqFeatures(Mat image);
+
+    /**
+     * 获取垂直和水平的直方图图值
+     * @param image
+     * @return
+     */
+    Mat getHistogramFeatures(Mat image);
 
 }

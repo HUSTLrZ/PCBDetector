@@ -12,7 +12,6 @@ public class ResLocate {
 
     private static final String PATH = "res/img/";
     private static int threshold = 0;           //二值化阈值
-    private static int thresholdType = 8;       //二值化类型（自动选取阈值）
     private static int morphOpenSizeX = 20;     //开操作size
     private static int morphOpenSizeY = 20;     //开操作size
     private static int morphDilateSizeX = 17;   //膨胀size
@@ -45,7 +44,7 @@ public class ResLocate {
 
         //二值化
         Mat img_threshold = new Mat();
-        Imgproc.threshold(src_gray, img_threshold, threshold, 255, thresholdType);
+        Imgproc.threshold(src_gray, img_threshold, threshold, 255, Imgproc.THRESH_OTSU);
 
         Imgcodecs.imwrite(PATH + "img_threshold.jpg", img_threshold);
 

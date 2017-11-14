@@ -66,7 +66,7 @@ public class SVMTrain {
         if (name.equals("HasResistor")) {
             label = 1;
         } else {
-            label = -1;
+            label = 0;
         }
         String filePath = "res/data/train/" + name;
         List<String> files = new ArrayList<String>();
@@ -84,8 +84,9 @@ public class SVMTrain {
             Mat img = Imgcodecs.imread(files.get(i));
 
             //调用回调函数决定特征
-            Mat features = this.callback.getHistogramFeatures(img);
+            Mat features = callback.getHisteqFeatures(img);
             features = features.reshape(1, 1);
+
             trainingImages.push_back(features);
             trainingLabels.add(label);
         }
@@ -96,7 +97,7 @@ public class SVMTrain {
         if (name.equals("HasResistor")) {
             label = 1;
         } else {
-            label = -1;
+            label = 0;
         }
         String filePath = "res/data/test/" + name;
         List<String> files = new ArrayList<String>();
@@ -179,7 +180,28 @@ public class SVMTrain {
                 labelMat.put(i, 0, trainingLabels.get(i));
             }
 
+            trainingImages.release();
+            trainingLabels = null;
         }
+
+        //还没测试过，先研究研究
+        SVM svm = SVM.create();
+        svm.setType(SVM.C_SVC);
+        svm.setKernel(SVM.RBF);
+        svm.setDegree(0.1);
+        svm.setGamma(0.1);
+        svm.setCoef0(0.1);
+        svm.setNu(0.1);
+        svm.setP(0.1);
+        svm.setC(1);
+        svm.setTermCriteria(new TermCriteria(1, 20000, 0.0001));
+
+        TrainData trainData = TrainData.create(dataMat, Ml.ROW_SAMPLE, labelMat);
+        svm.train(trainData.getSamples(), Ml.ROW_SAMPLE, trainData.getResponses());
+
+//        svm.save("res/model/svm.xml");
+        dataMat.release();
+        labelMat.release();
 
         List<Mat> testingImages = new ArrayList<Mat>();
         List<Integer> testingLabels = new ArrayList<Integer>();
@@ -188,22 +210,37 @@ public class SVMTrain {
         getHasResistorTest(testingImages, testingLabels);
         getNoResistorTest(testingImages, testingLabels);
 
-        //还没测试过，先研究研究
-        SVM svm = SVM.create();
-        svm.setType(SVM.C_SVC);
-        svm.setKernel(SVM.RBF);
-        svm.setDegree(0.1);
-        svm.setGamma(1);
-        svm.setCoef0(0.1);
-        svm.setNu(0.1);
-        svm.setP(0.1);
-        svm.setC(1);
-        svm.setTermCriteria(new TermCriteria(1, 100000, 0.0001));
+        double ptrue_rtrue = 0;
+        double ptrue_rfalse = 0;
+        double pfalse_rtrue = 0;
+        double pfalse_rfalse = 0;
 
-        TrainData trainData = TrainData.create(dataMat, Ml.ROW_SAMPLE, labelMat);
-        svm.train(trainData);
+        int size = testingImages.size();
+        for (int i = 0; i < size; i++) {
+            Mat p = testingImages.get(i);
 
-        svm.save("res/model/svm.xml");
+            //调用回调函数决定特征
+            Mat features = callback.getHisteqFeatures(p);
+            features = features.reshape(1, 1);
+            features.convertTo(features, CvType.CV_32FC1);
+
+            int predict = (int) svm.predict(features);
+            int real = testingLabels.get(i);
+
+            if (predict == 1 && real == 1)
+                ptrue_rtrue++;
+            if (predict == 1 && real == 0)
+                ptrue_rfalse++;
+            if (predict == 0 && real == 1)
+                pfalse_rtrue++;
+            if (predict == 0 && real == 0)
+                pfalse_rfalse++;
+        }
+
+        System.out.println("ptrue_rtrue: " + Double.valueOf(ptrue_rtrue).toString());
+        System.out.println("ptrue_rfalse: " + Double.valueOf(ptrue_rfalse).toString());
+        System.out.println("pfalse_rtrue: " + Double.valueOf(pfalse_rtrue).toString());
+        System.out.println("pfalse_rfalse: " + Double.valueOf(pfalse_rfalse).toString());
         return 0;
     }
 }
