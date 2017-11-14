@@ -12,7 +12,6 @@ import org.opencv.ml.TrainData;
 import java.util.*;
 
 /**
- * not finished yet
  *
  * @Author HustLrz
  * @Date Created in 15:08 2017/11/6
@@ -84,7 +83,7 @@ public class SVMTrain {
             Mat img = Imgcodecs.imread(files.get(i));
 
             //调用回调函数决定特征
-            Mat features = callback.getHisteqFeatures(img);
+            Mat features = callback.getHistogramFeatures(img);
             features = features.reshape(1, 1);
 
             trainingImages.push_back(features);
@@ -220,7 +219,7 @@ public class SVMTrain {
             Mat p = testingImages.get(i);
 
             //调用回调函数决定特征
-            Mat features = callback.getHisteqFeatures(p);
+            Mat features = callback.getHistogramFeatures(p);
             features = features.reshape(1, 1);
             features.convertTo(features, CvType.CV_32FC1);
 
