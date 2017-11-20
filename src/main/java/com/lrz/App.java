@@ -1,6 +1,8 @@
 package com.lrz;
 
-import com.lrz.train.SVMTrain;
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
+import org.opencv.imgcodecs.Imgcodecs;
 
 
 public class App {
@@ -11,12 +13,16 @@ public class App {
     }
 
     public static void main(String[] args) {
-//        Mat src = Imgcodecs.imread("res/img/debug_crop_2.jpg"); //读取原始电路板图片
+        Mat src = Imgcodecs.imread("res/img/morphology_dilate.jpg", CvType.CV_8UC1); //读取原始电路板图片
 //        ResLocate resLocate = new ResLocate();
 //        resLocate.resLocate(src);
 //        ResIdentify resIdentify = new ResIdentify();
 //        resIdentify.resIdentify(src);
-        SVMTrain svm = new SVMTrain();
-        svm.svmTrain(true, false);
+//        SVMTrain svm = new SVMTrain();
+//        svm.svmTrain(true, false);
+
+        CapLocate capLocate = new CapLocate();
+        capLocate.capLocate(src);
+
     }
 }

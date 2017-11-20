@@ -100,4 +100,18 @@ public class ResIdentify {
         Imgcodecs.imwrite(PATH + "debug_crop_" + index + ".jpg", img_crop);
         return img_crop;
     }
+
+    /**
+     * 分析色环颜色
+     * @param src
+     */
+    private void getColor(Mat src) {
+        Imgproc.cvtColor(src, src, Imgproc.COLOR_BGR2HSV);
+        for (int i = 0; i < src.rows(); i++) {
+            for (int j = 0; j < src.cols(); j++) {
+                double[] hsv_value = src.get(i, j);
+                //统计
+            }
+        }
+    }
 }

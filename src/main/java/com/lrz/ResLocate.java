@@ -16,7 +16,7 @@ public class ResLocate {
     private static int morphOpenSizeY = 20;     //开操作size
     private static int morphDilateSizeX = 17;   //膨胀size
     private static int morphDilateSizeY = 17;   //膨胀size
-    private static int verifyArea = 1000;       //符合要求的矩形块最小面积
+    private static int verifyArea = 8000;       //符合要求的矩形块最小面积
 
 
     /**
