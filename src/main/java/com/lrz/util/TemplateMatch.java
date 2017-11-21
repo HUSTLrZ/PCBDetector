@@ -1,4 +1,4 @@
-package com.lrz;
+package com.lrz.util;
 
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
@@ -8,6 +8,7 @@ import org.opencv.imgproc.Imgproc;
 
 /**
  * 利用模板匹配来匹配电容加号，返回加号位置
+ *
  * @Author HustLrz
  * @Date Created in 13:49 2017/11/20
  */
@@ -21,6 +22,6 @@ public class TemplateMatch {
         Point matchLoc = mlr.minLoc;
 //        Imgproc.rectangle(src, matchLoc, new Point(matchLoc.x + template.width(), matchLoc.y + template.height()), new Scalar(255, 0, 255, 255), 5);
 //        Imgcodecs.imwrite("res/img/capacity/templateMatch.jpg", src);
-        return matchLoc;
+        return new Point(matchLoc.x + template.rows() / 2, matchLoc.y + template.cols() / 2);
     }
 }

@@ -17,7 +17,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-        Mat src = Imgcodecs.imread("res/img/capacity/debug_crop_6.jpg"); //读取原始电路板图片
+        Mat src = Imgcodecs.imread("res/img/capacity/debug_crop_21.jpg"); //读取原始电路板图片
 //        ResLocate resLocate = new ResLocate();
 //        resLocate.resLocate(src);
 //        ResIdentify resIdentify = new ResIdentify();

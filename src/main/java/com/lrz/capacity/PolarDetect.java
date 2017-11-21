@@ -1,6 +1,6 @@
 package com.lrz.capacity;
 
-import com.lrz.TemplateMatch;
+import com.lrz.util.TemplateMatch;
 import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
@@ -41,6 +41,12 @@ public class PolarDetect {
             angle = 360 - angle;
         }
         System.out.println(angle);
+
+        Imgproc.circle(src, markPoint, 1, new Scalar(0, 0, 255));
+        Imgproc.circle(src, gravity_center, 1, new Scalar(0, 0, 255));
+        Imgproc.circle(src, circle_center, 1, new Scalar(0, 0, 255));
+
+        Imgcodecs.imwrite("res/img/capacity/result.jpg", src);
     }
 
     private void findCenter(Mat src) {

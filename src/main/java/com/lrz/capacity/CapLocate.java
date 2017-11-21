@@ -1,4 +1,4 @@
-package com.lrz;
+package com.lrz.capacity;
 
 import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;

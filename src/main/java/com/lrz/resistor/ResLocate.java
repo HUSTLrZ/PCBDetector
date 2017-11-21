@@ -1,4 +1,4 @@
-package com.lrz;
+package com.lrz.resistor;
 
 import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
