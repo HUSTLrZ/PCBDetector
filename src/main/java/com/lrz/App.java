@@ -1,5 +1,6 @@
 package com.lrz;
 
+import com.lrz.capacity.PolarDetect;
 import org.opencv.core.Mat;
 import org.opencv.core.Point;
 import org.opencv.core.Scalar;
@@ -16,7 +17,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-        Mat src = Imgcodecs.imread("G:/123.png"); //读取原始电路板图片
+        Mat src = Imgcodecs.imread("res/img/capacity/debug_crop_6.jpg"); //读取原始电路板图片
 //        ResLocate resLocate = new ResLocate();
 //        resLocate.resLocate(src);
 //        ResIdentify resIdentify = new ResIdentify();
@@ -29,26 +30,10 @@ public class App {
 //        Mat matchSrc=Imgcodecs.imread("res/img/capacity/debug_crop_6.jpg");
 //        Mat template = Imgcodecs.imread("G:/template.jpg");
 //        TemplateMatch.match(matchSrc, template);
-        detect();
+//        detect();
 //        process();
-    }
-
-
-    public static void detect() {
-        Mat src = Imgcodecs.imread("res/img/capacity/debug_crop_6.jpg");
-        Mat src_gray = new Mat();
-        Imgproc.cvtColor(src, src_gray, Imgproc.COLOR_BGR2GRAY);
-        Mat circles = new Mat();
-        Imgproc.HoughCircles(src_gray, circles, Imgproc.CV_HOUGH_GRADIENT, 1.2, 10, 100, 100, 0, 120);
-        for (int i = 0; i < circles.rows(); i++) {
-            for (int j = 0; j < circles.cols(); j++) {
-                float[] arr = new float[3];
-                circles.get(i, j, arr);
-                Point pt = new Point(arr[0], arr[1]);
-                Imgproc.circle(src, pt, (int) arr[2] + 2, new Scalar(255, 0, 0), 4);
-            }
-        }
-        Imgcodecs.imwrite("res/img/capacity/houghCircle.jpg", src);
+        PolarDetect polarDetect = new PolarDetect();
+        polarDetect.detect(src);
     }
 
     public static void process() {

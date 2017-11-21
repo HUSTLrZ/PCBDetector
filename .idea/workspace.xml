@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4095936-325c-4431-a405-5cb4816b164f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lrz/TemplateMatch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lrz/capacity/PolarDetect.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lrz/App.class" afterPath="$PROJECT_DIR$/target/classes/com/lrz/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lrz/ResLocate.class" afterPath="$PROJECT_DIR$/target/classes/com/lrz/ResLocate.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lrz/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/lrz/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lrz/CapLocate.java" afterPath="$PROJECT_DIR$/src/main/java/com/lrz/CapLocate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lrz/capacity/PolarDetect.java" afterPath="$PROJECT_DIR$/src/main/java/com/lrz/capacity/PolarDetect.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="CapLocate.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CapLocate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/CapLocate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-115">
-              <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="184">
+              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1592#1604#0" expanded="true" />
@@ -37,12 +34,53 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="45" column="39" lean-forward="true" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+            <state relative-caret-position="667">
+              <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="open_circle.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/img/capacity/test/open_circle.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PolarDetect.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/capacity/PolarDetect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2191#2203#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="houghCircle.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/img/capacity/houghCircle.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="debug_crop_6.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/img/capacity/debug_crop_6.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="open.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/img/capacity/test/open.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -76,10 +114,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lrz/ResLocate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrz/HoughCircle.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/lrz/HoughCircle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lrz/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrz/TemplateMatch.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lrz/capacity/PolarDetect.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrz/CapLocate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lrz/capacity/PolarDetect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lrz/App.java" />
       </list>
     </option>
   </component>
@@ -127,32 +165,6 @@
             <path>
               <item name="ResLocator" type="b2602c69:ProjectViewProjectNode" />
               <item name="ResLocator" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ResLocator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ResLocator" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ResLocator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ResLocator" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="capacity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ResLocator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ResLocator" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="capacity" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ResLocator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ResLocator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -175,6 +187,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="lrz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ResLocator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ResLocator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lrz" type="462c0819:PsiDirectoryNode" />
+              <item name="capacity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ResLocator" type="b2602c69:ProjectViewProjectNode" />
@@ -394,7 +415,7 @@
       <workItem from="1510931769861" duration="1205000" />
       <workItem from="1510980187772" duration="2399000" />
       <workItem from="1511141299390" duration="23001000" />
-      <workItem from="1511225137814" duration="2103000" />
+      <workItem from="1511225137814" duration="9153000" />
     </task>
     <task id="LOCAL-00001" summary="a demo to locate resistors on pcb">
       <created>1509685703206</created>
@@ -473,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511149530313</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="commit">
+      <created>1511227252661</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1511227252661</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -482,7 +510,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83750000" />
+    <option name="totallyTimeSpent" value="90800000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -532,13 +560,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/train/Features.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -718,13 +739,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="jar://G:/opencv/build/java/opencv-320.jar!/org/opencv/imgproc/Imgproc.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="568" column="25" lean-forward="false" selection-start-line="568" selection-start-column="25" selection-end-line="568" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/img/draw_Contours.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -745,11 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/img/capacity/img.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/img/capacity/debug_crop_22.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -761,11 +770,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/img/morphology_dilate.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/img/capacity/templateMatch.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -798,49 +802,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/img/capacity/debug_crop_6.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/img/capacity/test/threshold.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/img/capacity/test/open.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/img/capacity/debug_crop_18.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/img/capacity/houghCircle.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/capacity/PolarDetect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="45" column="39" lean-forward="true" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/TemplateMatch.java">
@@ -853,13 +817,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/img/capacity/templateMatch.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/img/capacity/test/threshold.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/CapLocate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="184">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1592#1604#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/opencv/build/java/opencv-320.jar!/org/opencv/imgproc/Imgproc.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="884" column="23" lean-forward="false" selection-start-line="884" selection-start-column="23" selection-end-line="884" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/img/capacity/test/open.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/img/capacity/houghCircle.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/img/capacity/debug_crop_6.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/img/capacity/img.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/img/capacity/test/open_circle.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/capacity/PolarDetect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2191#2203#0" expanded="true" />
           </folding>
         </state>
       </provider>
