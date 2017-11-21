@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4095936-325c-4431-a405-5cb4816b164f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/lrz/ResLocate.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/lrz/App.class" afterPath="$PROJECT_DIR$/target/classes/com/lrz/App.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lrz/App.java" afterPath="$PROJECT_DIR$/src/main/java/com/lrz/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lrz/capacity/CapLocate.java" afterPath="$PROJECT_DIR$/src/main/java/com/lrz/capacity/CapLocate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lrz/capacity/PolarDetect.java" afterPath="$PROJECT_DIR$/src/main/java/com/lrz/capacity/PolarDetect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lrz/resistor/ResIdentify.java" afterPath="$PROJECT_DIR$/src/main/java/com/lrz/resistor/ResIdentify.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lrz/resistor/ResLocate.java" afterPath="$PROJECT_DIR$/src/main/java/com/lrz/resistor/ResLocate.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/debug_crop_0.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/debug_crop_0.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/debug_crop_1.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/debug_crop_1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/debug_crop_2.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/debug_crop_2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/debug_crop_3.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/debug_crop_3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/debug_crop_4.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/debug_crop_4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/debug_crop_5.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/debug_crop_5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/draw_Contours.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/draw_Contours.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/identify/debug_crop_0.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/identify/debug_crop_0.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/identify/debug_crop_1.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/identify/debug_crop_1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/identify/debug_crop_2.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/identify/debug_crop_2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/identify/debug_crop_3.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/identify/debug_crop_3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/img_threshold.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/img_threshold.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/morphology_dilate.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/morphology_dilate.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/morphology_open.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/morphology_open.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/result.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/result.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/src_blur.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/src_blur.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/res/img/src_gray.jpg" afterPath="$PROJECT_DIR$/res/img/resistor/src_gray.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="276">
+              <caret line="44" column="80" lean-forward="false" selection-start-line="44" selection-start-column="80" selection-end-line="44" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,10 +50,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="src.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/img/src.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="result.jpg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/img/capacity/result.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="391">
+                <caret line="17" column="84" lean-forward="false" selection-start-line="17" selection-start-column="84" selection-end-line="17" selection-end-column="84" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
           </provider>
         </entry>
       </file>
@@ -117,7 +114,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lrz/train/SVMCallback.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrz/train/Features.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrz/train/SVMTrain.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrz/ResIdentify.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrz/ResLocate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrz/HoughCircle.java" />
@@ -130,6 +126,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lrz/capacity/PolarDetect.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrz/capacity/CapLocate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrz/App.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -386,7 +383,7 @@
       <workItem from="1510980187772" duration="2399000" />
       <workItem from="1511141299390" duration="23001000" />
       <workItem from="1511225137814" duration="10984000" />
-      <workItem from="1511245700371" duration="593000" />
+      <workItem from="1511245700371" duration="3360000" />
     </task>
     <task id="LOCAL-00001" summary="a demo to locate resistors on pcb">
       <created>1509685703206</created>
@@ -479,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511234466824</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="commit">
+      <created>1511246320760</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1511246320760</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -488,7 +492,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93224000" />
+    <option name="totallyTimeSpent" value="95991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -502,7 +506,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38838267" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38838267" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -631,16 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="207">
-            <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/train/Features.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
@@ -755,11 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/img/src.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/capacity/CapLocate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -778,6 +767,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="44" column="80" lean-forward="false" selection-start-line="44" selection-start-column="80" selection-end-line="44" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/img/src.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/capacity/PolarDetect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
@@ -793,13 +797,14 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lrz/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="391">
+            <caret line="17" column="84" lean-forward="false" selection-start-line="17" selection-start-column="84" selection-end-line="17" selection-end-column="84" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
