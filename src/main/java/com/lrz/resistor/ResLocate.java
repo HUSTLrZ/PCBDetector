@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ResLocate {
 
-    private static final String PATH = "res/img/";
+    private static final String PATH = "res/img/resistor";
     private static int threshold = 0;           //二值化阈值
     private static int morphOpenSizeX = 20;     //开操作size
     private static int morphOpenSizeY = 20;     //开操作size

@@ -88,8 +88,6 @@ public class CapLocate {
             Mat resultMat = showResultMat(img_rotated, size, minRect.center, i);
         }
 
-
-        Imgcodecs.imwrite(PATH + "img.jpg", src);
         return null;
     }
 

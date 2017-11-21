@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class PolarDetect {
 
-    private static String templatePath = "G:/template.jpg";  //加号模板
+    private static String templatePath = "res/img/capacity/template.jpg";  //加号模板
     private Point circle_center;   //圆心
     private Point gravity_center;   //质心
 

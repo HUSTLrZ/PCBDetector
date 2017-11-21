@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class ResIdentify {
 
-    private static final String PATH = "res/img/identify/";
+    private static final String PATH = "res/img/resistor/identify/";
     private static int threshold = 170;   //二值化阈值，根据具体情况调整
     private static int erodeSizeX = 3;
     private static int erodeSizeY = 30;   //纵向腐蚀

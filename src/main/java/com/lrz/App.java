@@ -2,8 +2,6 @@ package com.lrz;
 
 import com.lrz.capacity.PolarDetect;
 import org.opencv.core.Mat;
-import org.opencv.core.Point;
-import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
@@ -27,11 +25,6 @@ public class App {
 //
 //        CapLocate capLocate = new CapLocate();
 //        capLocate.capLocate(src);
-//        Mat matchSrc=Imgcodecs.imread("res/img/capacity/debug_crop_6.jpg");
-//        Mat template = Imgcodecs.imread("G:/template.jpg");
-//        TemplateMatch.match(matchSrc, template);
-//        detect();
-//        process();
         PolarDetect polarDetect = new PolarDetect();
         polarDetect.detect(src);
     }
