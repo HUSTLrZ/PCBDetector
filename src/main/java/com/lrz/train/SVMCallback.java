@@ -9,13 +9,6 @@ import org.opencv.core.Mat;
 public interface SVMCallback {
 
     /**
-     * 生成直方图均衡特征的回调函数
-     * @param image
-     * @return
-     */
-    Mat getHisteqFeatures(Mat image);
-
-    /**
      * 获取垂直和水平的直方图图值
      * @param image
      * @return

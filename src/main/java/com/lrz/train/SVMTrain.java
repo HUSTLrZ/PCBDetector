@@ -183,7 +183,6 @@ public class SVMTrain {
             trainingLabels = null;
         }
 
-        //还没测试过，先研究研究
         SVM svm = SVM.create();
         svm.setType(SVM.C_SVC);
         svm.setKernel(SVM.RBF);
@@ -198,7 +197,7 @@ public class SVMTrain {
         TrainData trainData = TrainData.create(dataMat, Ml.ROW_SAMPLE, labelMat);
         svm.train(trainData.getSamples(), Ml.ROW_SAMPLE, trainData.getResponses());
 
-//        svm.save("res/model/svm.xml");
+//        svm.save("res/model/svm.xml");   //出现问题
         dataMat.release();
         labelMat.release();
 

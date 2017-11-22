@@ -11,7 +11,6 @@ import java.util.List;
 
 /**
  * 检测电容极性是否错误,输出角度
- * not finished
  *
  * @Author HustLrz
  * @Date Created in 8:51 2017/11/21
@@ -22,6 +21,10 @@ public class PolarDetect {
     private Point circle_center;   //圆心
     private Point gravity_center;   //质心
 
+    /**
+     * 通过求圆心-质心与圆心-加号的角度来检测极性与偏移
+     * @param src
+     */
     public void detect(Mat src) {
         Mat template = Imgcodecs.imread(templatePath);
         Point markPoint = TemplateMatch.match(src, template);

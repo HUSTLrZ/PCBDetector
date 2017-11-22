@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 定位电容 not finished
+ * 通过面积和圆度来定位电容
+ *
  * @Author HustLrz
  * @Date Created in 11:47 2017/11/17
  */
@@ -22,6 +23,7 @@ public class CapLocate {
     private static int morphDilateSizeY = 17;   //膨胀size
 
     public List<Mat> capLocate(Mat src) {
+        List<Mat> resultList = new ArrayList<Mat>();
         Mat src_blur = new Mat();
         Mat src_gray = new Mat();
 
@@ -48,6 +50,7 @@ public class CapLocate {
         List<MatOfPoint> contours = new ArrayList<MatOfPoint>();
         Imgproc.findContours(img_threshold, contours, hierarchy, Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_NONE);
 
+        //通过圆度和面积两项指标来获取电容
         for (int i = 0; i < contours.size(); i++) {
             int S = (int) Imgproc.contourArea(contours.get(i));
             if (S < 15000 || S > 23000) {
@@ -70,10 +73,6 @@ public class CapLocate {
                 continue;
             }
             System.out.println(S + " " + L + " " + roundness);
-//            Point center = new Point();
-//            float[] radius = new float[1];
-//            Imgproc.minEnclosingCircle(mtx, center, radius);
-//            Imgproc.circle(src, center, (int) radius[0] + 20, new Scalar(255, 0, 255, 255), 3);
             RotatedRect minRect = Imgproc.minAreaRect(mtx);
             double r = minRect.size.width / minRect.size.height;
             double angle = minRect.angle;
@@ -86,9 +85,10 @@ public class CapLocate {
             Mat img_rotated = new Mat();
             Imgproc.warpAffine(src, img_rotated, rotMat, src.size());
             Mat resultMat = showResultMat(img_rotated, size, minRect.center, i);
+            resultList.add(resultMat);
         }
 
-        return null;
+        return resultList;
     }
 
     private Mat showResultMat(Mat src, Size rect_size, Point center, int index) {

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author HustLrz   (not finished)
+ * @Author HustLrz
  * @Date Created in 8:24 2017/11/8
  */
 public class ResIdentify {
@@ -102,7 +102,7 @@ public class ResIdentify {
     }
 
     /**
-     * 分析色环颜色
+     * 转换到HSV空间分析色环颜色
      * @param src
      */
     private void getColor(Mat src) {

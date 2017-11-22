@@ -20,8 +20,6 @@ public class TemplateMatch {
         Core.normalize(result, result, 0, 1, Core.NORM_MINMAX, -1);
         Core.MinMaxLocResult mlr = Core.minMaxLoc(result);
         Point matchLoc = mlr.minLoc;
-//        Imgproc.rectangle(src, matchLoc, new Point(matchLoc.x + template.width(), matchLoc.y + template.height()), new Scalar(255, 0, 255, 255), 5);
-//        Imgcodecs.imwrite("res/img/capacity/templateMatch.jpg", src);
         return new Point(matchLoc.x + template.rows() / 2, matchLoc.y + template.cols() / 2);
     }
 }
