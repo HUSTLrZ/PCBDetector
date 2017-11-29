@@ -1,6 +1,7 @@
 package com.lrz;
 
 import com.lrz.capacity.PolarDetect;
+import com.lrz.missparts.MissParts;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 
@@ -23,8 +24,11 @@ public class App {
 //
 //        CapLocate capLocate = new CapLocate();
 //        capLocate.capLocate(src);
-        PolarDetect polarDetect = new PolarDetect();
-        polarDetect.detect(src);
+//        PolarDetect polarDetect = new PolarDetect();
+//        polarDetect.detect(src);
+
+        MissParts missParts = new MissParts();
+        missParts.subtract();
     }
 
 }
