@@ -11,20 +11,20 @@
 - IntelliJ IDEA or Eclipse
 - OpenCV 3.2
 
-原图如下：
+原图如下：</br>
 ![image](https://github.com/HUSTLrZ/PCBDetector/raw/master/screenshots/src.png)
 
-定位出的电阻相似物：
+定位出的电阻相似物：</br>
 ![image](https://github.com/HUSTLrZ/PCBDetector/raw/master/screenshots/result.png)
 
-提取色环：
+提取色环：</br>
 ![image](https://github.com/HUSTLrZ/PCBDetector/raw/master/screenshots/colorband.png)
 
-定位电容：
+定位电容：</br>
 ![image](https://github.com/HUSTLrZ/PCBDetector/raw/master/screenshots/capacity.jpg)
 
-正极模板：
+正极模板：</br>
 ![image](https://github.com/HUSTLrZ/PCBDetector/raw/master/screenshots/template.jpg)
 
-电容极性判断：
+电容极性判断：</br>
 ![image](https://github.com/HUSTLrZ/PCBDetector/raw/master/screenshots/result.jpg)
